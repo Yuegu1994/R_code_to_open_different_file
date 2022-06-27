@@ -1,0 +1,23 @@
+---
+title: "bed_file_R_code"
+author: "Yue Gu"
+date: "27/06/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+```{r}
+# check the working directory
+getwd()
+```
+
+```{r}
+# the current version of R we are using 
+R.version
+
+```
