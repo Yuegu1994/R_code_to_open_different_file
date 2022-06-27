@@ -1,5 +1,5 @@
 ---
-title: "bed_file_R_code"
+title: "read_bed_bim_bed_format_R_code"
 author: "Yue Gu"
 date: "27/06/2022"
 output: html_document
@@ -11,6 +11,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## R Markdown
 
+
 ```{r}
 # check the working directory
 getwd()
@@ -19,5 +20,37 @@ getwd()
 ```{r}
 # the current version of R we are using 
 R.version
-
 ```
+
+```{r}
+#install.packages("genio")
+```
+
+```{r}
+library(genio)
+```
+
+```{r}
+# To clear the workspace environment
+rm(list = ls())
+```
+
+[documentation](https://search.r-project.org/CRAN/refmans/genio/html/read_plink.html)
+
+```{r}
+bim <- read_bim('C:\\Users\\ygu34\\Desktop\\Research Data Steward\\Temporary_datashare\\Sanchez_Molano_Enrique\\Lop_genotypes')
+
+View(bim)
+```
+
+```{r}
+fam <- read_fam('C:\\Users\\ygu34\\Desktop\\Research Data Steward\\Temporary_datashare\\Sanchez_Molano_Enrique\\Lop_genotypes.fam')
+View(fam)
+```
+
+```{r}
+bed <- read_plink('C:\\Users\\ygu34\\Desktop\\Research Data Steward\\Temporary_datashare\\Sanchez_Molano_Enrique\\Lop_genotypes.bed')
+
+View(bed)
+```
+
